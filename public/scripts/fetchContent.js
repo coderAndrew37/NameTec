@@ -72,36 +72,56 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // FAQs Section
-  const accordion = document.getElementById("faqsAccordion");
-  if (accordion) {
+  const faqsContainer = document.querySelector("#faqs .space-y-4");
+  if (faqsContainer) {
     faqs.forEach((faq, index) => {
       const faqHTML = `
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading${index}">
-            <button
-              class="accordion-button ${index === 0 ? "" : "collapsed"}"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse${index}"
-              aria-expanded="${index === 0 ? "true" : "false"}"
-              aria-controls="collapse${index}"
-            >
-              ${faq.question}
-            </button>
-          </h2>
-          <div
-            id="collapse${index}"
-            class="accordion-collapse collapse ${index === 0 ? "show" : ""}"
-            aria-labelledby="heading${index}"
-            data-bs-parent="#faqsAccordion"
+        <div class="border border-gray-300 rounded-lg">
+          <button
+            class="w-full text-left px-4 py-3 flex justify-between items-center font-bold text-idcPrimary"
+            data-index="${index}"
           >
-            <div class="accordion-body">
-              ${faq.answer}
-            </div>
+            <span>${faq.question}</span>
+            <svg
+              class="w-5 h-5 text-idcPrimary transform transition-transform duration-300"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+          </button>
+          <div
+            class="hidden px-4 py-3 text-idcText transition-all duration-300"
+            id="faq-answer-${index}"
+          >
+            ${faq.answer}
           </div>
         </div>
       `;
-      accordion.innerHTML += faqHTML;
+      faqsContainer.innerHTML += faqHTML;
+    });
+
+    // Add toggle functionality
+    const faqButtons = document.querySelectorAll("#faqs button");
+    faqButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const index = button.getAttribute("data-index");
+        const answer = document.getElementById(`faq-answer-${index}`);
+        const icon = button.querySelector("svg");
+
+        // Toggle visibility of the answer
+        answer.classList.toggle("hidden");
+
+        // Rotate the icon
+        icon.classList.toggle("rotate-180");
+      });
     });
   }
 
