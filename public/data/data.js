@@ -22,6 +22,34 @@ export const services = [
     icon: "fas fa-project-diagram",
     image: "/images/services/project-management.jpg", // Local image path
   },
+  {
+    id: "4",
+    name: "Interior Designs",
+    desc: "Transform your spaces with modern, elegant, and customized interior designs.",
+    icon: "fas fa-paint-brush",
+    image: "/images/services/interior-designs.jpg",
+  },
+  {
+    id: "5",
+    name: "Road Works",
+    desc: "Expertly engineered road construction and maintenance solutions.",
+    icon: "fas fa-road",
+    image: "/images/services/road-works.jpg",
+  },
+  {
+    id: "6",
+    name: "Cost Estimation",
+    desc: "Accurate project cost estimates to help you plan your construction budget effectively.",
+    icon: "fas fa-calculator",
+    image: "/images/services/cost-estimation.jpg",
+  },
+  {
+    id: "7",
+    name: "Preparation of Bills of Quantity",
+    desc: "Detailed preparation of bills of quantity to streamline project planning and execution.",
+    icon: "fas fa-file-invoice-dollar",
+    image: "/images/services/bills-of-quantity.jpg",
+  },
 ];
 
 export const projects = [
