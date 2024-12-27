@@ -12,3 +12,31 @@
   transition: max-height 0.3s ease-in-out;
   overflow: hidden; /* Prevents content from overflowing during animation */
 }
+
+@media (max-width: 768px) {
+  #hero {
+    height: 60vh;
+  }
+}
+
+#process .grid div:hover,
+#testimonials .grid div:hover {
+  transform: scale(1.05); /* Subtle zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Elevate card */
+}
+
+#process .grid div:hover p,
+#testimonials .grid div:hover p,
+#process .grid div:hover h3 {
+  color: inherit; /* Prevent color change */
+}
+
+#process .grid div:hover i,
+#testimonials .grid div:hover img {
+  filter: none; /* Keep icon/images unaffected */
+}
+
+#projects .grid img {
+  height: 16rem; /* 64 Tailwind spacing scale */
+  object-fit: cover; /* Maintain aspect ratio */
+}

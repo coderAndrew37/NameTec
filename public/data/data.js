@@ -197,3 +197,30 @@ export const blogs = [
     },
   },
 ];
+
+export const processSteps = [
+  {
+    id: "1",
+    title: "Consultation",
+    desc: "We discuss your project goals and requirements.",
+    icon: "fas fa-comments",
+  },
+  {
+    id: "2",
+    title: "Planning",
+    desc: "We create a detailed project plan and timeline.",
+    icon: "fas fa-drafting-compass",
+  },
+  {
+    id: "3",
+    title: "Execution",
+    desc: "Our team brings your vision to life.",
+    icon: "fas fa-tools",
+  },
+  {
+    id: "4",
+    title: "Delivery",
+    desc: "We ensure a high-quality, on-time completion.",
+    icon: "fas fa-check-circle",
+  },
+];

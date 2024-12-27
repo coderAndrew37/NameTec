@@ -1,5 +1,12 @@
 // fetchContent.js
-import { testimonials, projects, services, faqs, blogs } from "../data/data.js";
+import {
+  testimonials,
+  projects,
+  services,
+  faqs,
+  blogs,
+  processSteps,
+} from "../data/data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Blogs Section
@@ -35,10 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (testimonialsContainer) {
     testimonials.forEach((testimonial) => {
       const testimonialHTML = `
-        <div class="bg-idcAccent p-6 rounded-lg shadow-lg hover:bg-idcHighlight hover:text-white transition">
+        <div class="p-6 rounded-lg shadow-lg bg-idcAccent hover:shadow-xl transition transform hover:scale-105">
           <img src="${testimonial.image}" alt="${testimonial.name}" class="w-16 h-16 rounded-full mx-auto mb-4" loading="lazy">
-          <p class="text-idcText mb-4">"${testimonial.message}"</p>
-          <p class="text-idcHighlight font-bold hover:text-white">– ${testimonial.name}</p>
+          <p class="text-idcText">"${testimonial.message}"</p>
+          <p class="text-idcHighlight font-bold mt-4">– ${testimonial.name}</p>
         </div>
       `;
       testimonialsContainer.innerHTML += testimonialHTML;
@@ -122,6 +129,22 @@ document.addEventListener("DOMContentLoaded", () => {
         // Rotate the icon
         icon.classList.toggle("rotate-180");
       });
+    });
+  }
+
+  // Process Section
+  const processContainer = document.querySelector("#process .grid");
+  if (processContainer) {
+    processSteps.forEach((step) => {
+      const processHTML = `
+        <div class="p-6 rounded-lg shadow-lg bg-idcBackground hover:shadow-xl transition transform hover:scale-105">
+          <i class="${step.icon} text-idcHighlight text-5xl mb-4"></i>
+          <div class="text-idcHighlight text-4xl font-bold">${step.id}</div>
+          <h3 class="text-xl font-semibold text-idcPrimary mt-2">${step.title}</h3>
+          <p class="text-idcText">${step.desc}</p>
+        </div>
+      `;
+      processContainer.innerHTML += processHTML;
     });
   }
 
