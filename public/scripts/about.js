@@ -5,6 +5,8 @@ import {
   generateProcessSteps,
 } from "./contentUtils.js";
 
+import "./menuToggle.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   generateProcessSteps(processSteps, "#process .grid");
   generateTestimonials(testimonials, "#testimonials .grid");
