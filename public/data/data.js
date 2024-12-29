@@ -6,7 +6,6 @@ export const services = [
     icon: "fas fa-drafting-compass",
     image: "/images/services/building-design.jpg", // Local image path
   },
-
   {
     id: "2",
     name: "Structural Engineering",
@@ -14,7 +13,6 @@ export const services = [
     icon: "fas fa-tools",
     image: "/images/services/structural-engineering.jpg", // Local image path
   },
-
   {
     id: "3",
     name: "Project Management",
@@ -41,14 +39,28 @@ export const services = [
     name: "Cost Estimation",
     desc: "Accurate project cost estimates to help you plan your construction budget effectively.",
     icon: "fas fa-calculator",
-    image: "/images/services/cost-estimation.jpg",
+    image: "/images/services/cost-estimation.jpeg",
   },
   {
     id: "7",
     name: "Preparation of Bills of Quantity",
     desc: "Detailed preparation of bills of quantity to streamline project planning and execution.",
     icon: "fas fa-file-invoice-dollar",
-    image: "/images/services/bills-of-quantity.jpg",
+    image: "/images/services/bills-of-quantity.jpeg",
+  },
+  {
+    id: "8",
+    name: "Industrial Epoxy Floor Application",
+    desc: "Durable and high-quality epoxy floor applications for industrial environments.",
+    icon: "fas fa-layer-group",
+    image: "/images/services/epoxy-floor-application.jpg", // Add a suitable image path
+  },
+  {
+    id: "9",
+    name: "Terrazzo Flooring",
+    desc: "Elegant and long-lasting terrazzo flooring solutions for modern spaces.",
+    icon: "fas fa-border-all",
+    image: "/images/services/terrazzo-flooring.jpg", // Add a suitable image path
   },
 ];
 
@@ -92,6 +104,18 @@ export const testimonials = [
     name: "Peter Kiplagat",
     message:
       "The structural engineering services provided by Kenya Builders are top-notch. Highly recommended!",
+  },
+  {
+    image: "/images/projects/karen-residential.jpg", // Local image path
+    name: "Grace Wangari",
+    message:
+      "I was impressed by the attention to detail in the interior designs for my new office space.",
+  },
+  {
+    image: "/images/projects/karen-residential.jpg", // Local image path
+    name: "John Kamau",
+    message:
+      "The cost estimation services helped me plan my construction budget effectively.",
   },
 ];
 
