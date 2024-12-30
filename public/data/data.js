@@ -69,26 +69,45 @@ export const projects = [
     id: "1",
     title: "Nairobi Office Complex",
     desc: "A state-of-the-art office complex featuring modern design and sustainable materials.",
-    image: "/images/projects/nairobi-office.jpg", // Local image path
+    thumbnail: "/images/projects/nairobi-office.jpg",
+    portfolioImages: [
+      "/images/projects/nairobi-office-1.jpg",
+      "/images/projects/nairobi-office-2.jpg",
+      "/images/projects/nairobi-office-3.jpg",
+    ],
   },
   {
     id: "2",
     title: "Coastal Resort Development",
     desc: "A luxury coastal resort with innovative architectural designs and eco-friendly features.",
-    image: "/images/projects/nairobi-office.jpg", // Local image path
+    thumbnail: "/images/projects/coastal-resort.jpg",
+    portfolioImages: [
+      "/images/projects/coastal-resort-1.jpg",
+      "/images/projects/coastal-resort-2.jpg",
+      "/images/projects/coastal-resort-3.jpg",
+    ],
   },
   {
     id: "3",
     title: "Karen Residential Estate",
     desc: "A premium residential estate with elegant, family-friendly homes.",
-    image: "/images/projects/karen-residential.jpg", // Local image path
+    thumbnail: "/images/projects/karen-residential.jpg",
+    portfolioImages: [
+      "/images/projects/karen-residential-1.jpg",
+      "/images/projects/karen-residential-2.jpg",
+      "/images/projects/karen-residential-3.jpg",
+    ],
   },
-
   {
     id: "4",
     title: "City Center Tower",
     desc: "A high-rise commercial tower located in the heart of Nairobi.",
-    image: "/images/projects/nairobi-office.jpg", // Local image path
+    thumbnail: "/images/projects/city-center-tower.jpg",
+    portfolioImages: [
+      "/images/projects/city-center-tower-1.jpg",
+      "/images/projects/city-center-tower-2.jpg",
+      "/images/projects/city-center-tower-3.jpg",
+    ],
   },
 ];
 
@@ -247,4 +266,16 @@ export const processSteps = [
     desc: "We ensure a high-quality, on-time completion.",
     icon: "fas fa-check-circle",
   },
+];
+
+export const gallery = [
+  { src: "/images/gallery/image1.jpg", alt: "Project Image 1" },
+  { src: "/images/gallery/image2.jpg", alt: "Project Image 2" },
+  { src: "/images/gallery/image3.jpg", alt: "Project Image 3" },
+  { src: "/images/gallery/image4.jpg", alt: "Project Image 4" },
+  { src: "/images/gallery/image5.jpg", alt: "Project Image 5" },
+  { src: "/images/gallery/image6.jpg", alt: "Project Image 6" },
+  { src: "/images/gallery/image7.jpg", alt: "Project Image 7" },
+  { src: "/images/gallery/image8.jpg", alt: "Project Image 8" },
+  { src: "/images/gallery/image9.jpg", alt: "Project Image 9" },
 ];

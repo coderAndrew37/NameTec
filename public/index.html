@@ -40,9 +40,9 @@
             >Services</a
           >
           <a
-            href="#projects"
+            href="#testimonials"
             class="block py-2 px-4 text-idcPrimary no-underline hover:text-idcHighlight hover:scale-105 transition-transform"
-            >Portfolio</a
+            >Testimonials</a
           >
           <a
             href="#contact"
@@ -189,12 +189,35 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="projects" class="py-16 bg-idcAccent">
+    <!-- 
+      <section id="projects" class="py-16 bg-idcAccent">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-idcSerif text-idcPrimary mb-6 text-center">
           Our Portfolio
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+      </div>
+    </section>
+
+     -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-idcBackground">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-idcSerif text-idcPrimary mb-6 text-center">
+          Our Gallery
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Gallery images will be dynamically loaded here -->
+        </div>
+        <div class="text-center mt-8">
+          <a
+            href="/gallery.html"
+            class="px-6 py-3 bg-idcHighlight text-white rounded-lg font-bold hover:bg-opacity-90 transition"
+          >
+            View All
+          </a>
+        </div>
       </div>
     </section>
 
@@ -404,12 +427,13 @@
             </li>
             <li>
               <a
-                href="#projects"
+                href="#testimonials"
                 class="flex items-center hover:underline hover:text-idcHighlight"
               >
-                <i class="fas fa-images mr-2 text-idcHighlight"></i> Portfolio
+                <i class="fas fa-star mr-2 text-idcHighlight"></i> Testimonials
               </a>
             </li>
+
             <li>
               <a
                 href="#contact"
@@ -506,6 +530,26 @@
             OK
           </a>
         </div>
+      </div>
+    </div>
+
+    <!-- Fullscreen Image Modal -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50"
+    >
+      <div class="relative max-w-4xl w-full">
+        <img
+          id="modalImage"
+          class="w-full h-auto rounded-lg"
+          alt="Selected Image"
+        />
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 bg-white text-black rounded-full p-2 text-xl"
+        >
+          &times;
+        </button>
       </div>
     </div>
 

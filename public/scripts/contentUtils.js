@@ -44,6 +44,7 @@ export function generateTestimonials(testimonials, containerSelector) {
   }
 }
 
+/*
 export function generateProjects(projects, containerSelector) {
   const container = document.querySelector(containerSelector);
   if (container) {
@@ -51,15 +52,14 @@ export function generateProjects(projects, containerSelector) {
       const projectHTML = `
         <div class="bg-idcAccent p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
           <img
-            src="${project.image}"
+            src="${project.thumbnail}"
             alt="${project.title}"
             class="rounded-lg mb-4"
           />
           <h3 class="text-xl font-bold text-idcPrimary mb-2">${project.title}</h3>
           <p class="text-idcText mb-4">${project.desc}</p>
           <a
-            href="${project.link}"
-            target="_blank"
+            href="/portfolio.html?id=${project.id}"
             class="px-4 py-2 bg-idcHighlight text-white rounded-lg font-bold hover:bg-opacity-90"
           >
             View Details
@@ -70,6 +70,7 @@ export function generateProjects(projects, containerSelector) {
     });
   }
 }
+*/
 
 export function generateFAQs(faqs, containerSelector) {
   const container = document.querySelector(containerSelector);

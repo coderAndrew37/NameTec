@@ -2,6 +2,7 @@ import "./fetchContent.js";
 import "./contact.js";
 import "./modal.js";
 import "./menuToggle.js";
+import "./galleryModal.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Smooth scroll effect

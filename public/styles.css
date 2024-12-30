@@ -62,3 +62,83 @@
 .animate-fade-in {
   animation: fadeIn 1.5s ease-out;
 }
+
+/* Portfolio Grid */
+#portfolioGrid img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Fullscreen Modal */
+#imageModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+#imageModal img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Modal Image Zoom Transition */
+#modalImage {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Homepage Thumbnail Styling */
+#projects img {
+  transition: transform 0.3s ease-in-out;
+}
+
+#projects img:hover {
+  transform: scale(1.05);
+}
+
+/* styles.css */
+#gallery .grid div,
+#gallery-container div {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+#gallery .grid img,
+#gallery-container img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#gallery .grid img:hover,
+#gallery-container img:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
+
+/* Ensure #imageModal is hidden by default */
+#imageModal {
+  display: none; /* Default state: hidden */
+  backdrop-filter: blur(4px); /* Adds a subtle blur effect */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#imageModal:not(.hidden) {
+  display: flex; /* Show modal only when the hidden class is removed */
+}
+
+/* Modal Image */
+#imageModal img {
+  max-height: 80vh;
+  max-width: 90vw;
+}
+
+/* Close Button Styling */
+#closeModal {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#closeModal:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
