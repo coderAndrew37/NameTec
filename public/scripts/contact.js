@@ -1,7 +1,7 @@
 const API_BASE_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:3000/api/contact" // Local environment
-    : "https://your-vercel-deployment.vercel.app/api/contact"; // Production environment
+    : "https://name-tec.vercel.app/api/contact"; // Production environment
 
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.querySelector(".js-contact-form");

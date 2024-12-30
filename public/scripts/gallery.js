@@ -1,5 +1,6 @@
 import { gallery } from "../data/data.js";
 import { showImageModal } from "./galleryModal.js"; // Import only the modal function you need
+import "./menuToggle.js";
 
 let currentIndex = 0;
 const itemsPerPage = 6;
