@@ -16,7 +16,7 @@ export function generateBlogs(blogs, containerSelector) {
             blog.date
           ).toDateString()}</p>
           <a
-            href="/blog.html?id=${blog.id}"
+            href="/blog?id=${blog.id}"
             class="px-4 py-2 bg-idcHighlight text-white rounded-lg font-bold hover:bg-opacity-90"
           >
             Read More
