@@ -23,7 +23,6 @@ const transporter = nodemailer.createTransport({
 // Contact form route
 router.post("/", dailyLimit, async (req, res) => {
   const { name, email, message } = req.body;
-  console.log("Incoming request:", req.body);
 
   // Validate input data
   if (!name || !email || !message) {
@@ -82,7 +81,7 @@ router.post("/", dailyLimit, async (req, res) => {
 
     // Send acknowledgment email to user
     await transporter.sendMail({
-      from: `"Dev Andrew" <${process.env.EMAIL_USER}>`,
+      from: `"Nametec Building and Construction Company Limited" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "Thank you for contacting us",
       html: `
@@ -97,7 +96,7 @@ router.post("/", dailyLimit, async (req, res) => {
             <blockquote>${message}</blockquote>
             <footer>
               <p>Best Regards,</p>
-              <p>Dev Andrew</p>
+              <p>Nametec Building and Construction Company Limited</p>
             </footer>
           </body>
         </html>
