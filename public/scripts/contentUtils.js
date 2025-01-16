@@ -30,11 +30,16 @@ export function generateBlogs(blogs, containerSelector) {
 
 export function generateTestimonials(testimonials, containerSelector) {
   const container = document.querySelector(containerSelector);
+
   if (container) {
     testimonials.forEach((testimonial) => {
       const testimonialHTML = `
         <div class="p-6 rounded-lg shadow-lg bg-idcAccent hover:shadow-xl transition transform hover:scale-105">
-          <img src="${testimonial.image}" alt="${testimonial.name}" class="w-16 h-16 rounded-full mx-auto mb-4" loading="lazy">
+          <img
+            src="${testimonial.image || "/images/default-user.jpg"}"
+            alt="${testimonial.name}"
+            class="w-16 h-16 rounded-full mx-auto mb-4"
+          />
           <p class="text-idcText">"${testimonial.message}"</p>
           <p class="text-idcHighlight font-bold mt-4">– ${testimonial.name}</p>
         </div>

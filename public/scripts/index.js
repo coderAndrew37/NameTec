@@ -5,6 +5,9 @@ import "./menuToggle.js";
 import "./galleryModal.js";
 import "./estimator.js";
 import "./animations.js";
+import "./geolocation.js";
+import "./plan.js";
+import "./reviews.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Smooth scroll effect

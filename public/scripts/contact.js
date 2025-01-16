@@ -3,7 +3,7 @@ const API_BASE_URL =
     ? "http://localhost:7000/api/contact" // Local environment
     : "https://nametec.onrender.com/api/contact"; // Production environment
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const contactForm = document.querySelector(".js-contact-form");
   const spinnerContainer = document.querySelector(".spinner-container");
   const formMessage = document.querySelector(".form-message");
@@ -76,4 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  const formData = new FormData(contactForm);
+
+  if (contactForm.attachment.files.length > 0) {
+    formData.append("attachment", contactForm.attachment.files[0]);
+  }
+
+  const response = await fetch(API_BASE_URL, {
+    method: "POST",
+    body: formData,
+  });
 });
