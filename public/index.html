@@ -11,6 +11,18 @@
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="/output.css" />
     <link rel="stylesheet" href="/styles.css" />
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1"></script>
+    <!-- scrollrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   </head>
 
   <body class="bg-idcBackground text-idcText font-idcSans" data-page="homepage">
@@ -183,6 +195,19 @@
           <!-- Service cards dynamically populated -->
         </div>
       </div>
+    </section>
+
+    <!-- Estimator Section -->
+    <section id="estimator" class="py-16 bg-idcAccent text-center">
+      <h2 class="text-3xl font-idcSerif text-idcPrimary mb-6">
+        Project Cost Estimator
+      </h2>
+      <button
+        id="openEstimator"
+        class="px-6 py-3 bg-idcHighlight text-white rounded-lg font-bold hover:bg-opacity-90"
+      >
+        Estimate Your Project
+      </button>
     </section>
 
     <!-- Portfolio Section -->
@@ -360,9 +385,9 @@
               <span
                 >Email:
                 <a
-                  href="mailto:nametechbandc2024@gmail.com"
+                  href="mailto:info@nametec.co.ke"
                   class="hover:underline text-idcHighlight"
-                  >nametechbandc2024@gmail.com</a
+                  >info@nametec.co.ke</a
                 ></span
               >
             </div>
@@ -494,7 +519,7 @@
       href="#"
       class="fixed bottom-4 right-4 bg-[#25D366] text-white py-3 px-6 rounded-lg shadow-lg flex items-center space-x-2 transition hover:bg-opacity-90 animate-shake"
       data-service="General Inquiry"
-      data-whatsapp="Hello Tiffi, I would like to discuss a project with you."
+      data-whatsapp="Hello Nametec, I would like to discuss a project with you."
     >
       <i class="fab fa-whatsapp text-2xl"></i>
       <span>Get a Quote</span>
@@ -548,6 +573,50 @@
           class="absolute top-4 right-4 bg-white text-black rounded-full p-2 text-xl"
         >
           &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- estimator modal -->
+    <div
+      id="estimatorModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+    >
+      <div class="bg-idcBackground rounded-lg p-6 w-full max-w-sm shadow-lg">
+        <h3 class="text-xl font-bold text-idcPrimary mb-4">
+          Project Estimator
+        </h3>
+        <label for="project-size" class="block text-idcText mb-2"
+          >Project Size (sq ft):</label
+        >
+        <input
+          id="project-size"
+          type="number"
+          class="w-full p-2 rounded mb-4 bg-idcAccent"
+        />
+
+        <label for="material-type" class="block text-idcText mb-2"
+          >Material Quality:</label
+        >
+        <select id="material-type" class="w-full p-2 rounded mb-4 bg-idcAccent">
+          <option value="10000">Standard</option>
+          <option value="20000">Premium</option>
+          <option value="30000">Luxury</option>
+        </select>
+
+        <button
+          id="calculateCost"
+          class="px-4 py-2 bg-idcHighlight text-white rounded"
+        >
+          Calculate
+        </button>
+        <p id="estimatedCost" class="mt-4 text-idcPrimary font-bold"></p>
+
+        <button
+          id="closeEstimator"
+          class="mt-6 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded"
+        >
+          Close
         </button>
       </div>
     </div>

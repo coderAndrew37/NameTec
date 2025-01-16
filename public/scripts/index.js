@@ -3,6 +3,8 @@ import "./contact.js";
 import "./modal.js";
 import "./menuToggle.js";
 import "./galleryModal.js";
+import "./estimator.js";
+import "./animations.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Smooth scroll effect
